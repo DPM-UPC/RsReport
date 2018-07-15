@@ -1,6 +1,7 @@
 package pe.edu.upc.RsReport.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import pe.edu.upc.RsReport.utils.DateFormatter;
 
 import java.math.BigDecimal;
 
@@ -62,6 +63,7 @@ public class OperationSummary {
     }
 
     public String getMonthDescription() {
+        monthDescription = DateFormatter.getMonthDesc(numMonth);
         return monthDescription;
     }
 
