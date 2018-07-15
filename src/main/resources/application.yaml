@@ -7,6 +7,22 @@ spring:
 ---
 
 spring:
+  profiles: test
+name: test-YAML
+environment: test
+datasource:
+  jndi-name: jdbc/SmartDB
+auth-security:
+  token:
+    secretCode: "SecretKeyToGenJWTs"
+    expirationTime: 100_000
+    tokenPrefix: "Bearer "
+    requestString: "Authorization"
+banner: banner.txt
+
+---
+
+spring:
   profiles: dev
 name: dev-YAML
 environment: dev
@@ -26,20 +42,4 @@ server:
   port: 8083
   servlet:
     context-path: /
-banner: banner.txt
-
----
-
-spring:
-  profiles: test
-name: test-YAML
-environment: test
-datasource:
-  jndi-name: jdbc/SmartDB
-auth-security:
-  token:
-    secretCode: "SecretKeyToGenJWTs"
-    expirationTime: 100_000
-    tokenPrefix: "Bearer "
-    requestString: "Authorization"
 banner: banner.txt
