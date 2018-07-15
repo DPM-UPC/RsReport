@@ -38,7 +38,7 @@ public class OperationSummary {
     }
 
     public BigDecimal getTotalIncome() {
-        return totalIncome;
+        return totalIncome.setScale(2, BigDecimal.ROUND_HALF_EVEN);
     }
 
     public void setTotalIncome(BigDecimal totalIncome) {
@@ -54,7 +54,7 @@ public class OperationSummary {
     }
 
     public BigDecimal getTotalExpense() {
-        return totalExpense;
+        return totalExpense.setScale(2, BigDecimal.ROUND_HALF_EVEN);
     }
 
     public void setTotalExpense(BigDecimal totalExpense) {
