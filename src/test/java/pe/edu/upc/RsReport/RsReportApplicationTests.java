@@ -30,7 +30,7 @@ public class RsReportApplicationTests {
     public void contextLoads() {
     }
 
-    @Test
+    //@Test
     public void listMapperOperationSummary() {
         OperationSummary operationSummary = new OperationSummary();
         operationSummary.setUserBusinessIdFk(1);
@@ -41,7 +41,7 @@ public class RsReportApplicationTests {
         LOGGER.info(summaryMapper.listOrderSummaryFrom(operationSummary, numMonthsMap));
     }
 
-    @Test
+    //@Test
     public void listServiceOperationSummary() {
         OperationSummary operationSummary = new OperationSummary();
         operationSummary.setUserBusinessIdFk(1);
